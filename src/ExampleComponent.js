@@ -122,6 +122,7 @@ const ExampleSpreadsheet = ({ triggerQuery, model, modelUpdate }) => {
             })}
         >
         {formatted_data.columns.map((c,i)=>{
+            // don't render specified ID values
             if (c!=='_ids') {
                 return <HotColumn 
                     key={c} 
